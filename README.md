@@ -1,4 +1,5 @@
 # Web Scrapper Worldometer
+
 Web Scrapper using Selenium Python on Worldometer Website (Covid-19)
 
 This is a project that is initiated in the early year of 2020 when Covid-19 began spreading across the globe.
@@ -10,3 +11,5 @@ It is a starter to begin collecting data and processing that data to become a gr
 Basically this repo consists of 2 parts: The scrapper and the database.
 
 As for the scrapper I am using python selenium scrapper and PostgreSQL for the database.
+
+_Read this in other languages: [English](README.md), [Indonesia](README.id.md), [日本語](README.ja.md)._
