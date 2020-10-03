@@ -11,3 +11,5 @@ Proyek ini dimulai dari mengoleksi data dan mengolah data tersebut menjadi grafi
 Repositori ini terdiri dari 2 bagian yaitu: Scraper dan Databasenya
 
 Untuk scrapernya saya menggunakan Selenium Python dan Databasenya menggunakan PostgreSQL
+
+_Baca ini dalam bahasa lain: [English](README.md), [Indonesia](README.id.md), [日本語](README.ja.md)._
