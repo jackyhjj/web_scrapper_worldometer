@@ -116,32 +116,32 @@ class Scrapper:
             print(args_str)
             cur.execute(b"INSERT INTO public.countries(country_name, total_cases, new_cases, total_deaths, new_deaths, total_recovered, active_cases, serious_critical, total_case_per_mil, death_per_mil, total_tests, test_per_mil)VALUES " + args_str) 
             conn.commit()
-            # postgres_insert_query = ""
-            # for res in data:
-            #     if len(res) > 0:
+            postgres_insert_query = ""
+            for res in data:
+                if len(res) > 0:
 
                     
-            #         postgres_insert_query = """
-            #             INSERT INTO public.countries(
-            #             country_name, total_cases, new_cases, total_deaths, new_deaths, total_recovered, active_cases, serious_critical, total_case_per_mil, death_per_mil, total_tests, test_per_mil)
-            #             VALUES ('{country_name}', {total_cases}, {new_cases}, {total_deaths}, {new_deaths}, {total_recovered}, {active_cases}, {serious_critical}, {total_case_per_mil}, {death_per_mill}, {total_tests}, {test_per_mil});
-            #         """.format(
-            #             country_name = str(res[0]),
-            #             total_cases = retrieve_number(res[1]),
-            #             new_cases = retrieve_number(res[2]),
-            #             total_deaths = retrieve_number(res[3]),
-            #             new_deaths = retrieve_number(res[4]),
-            #             total_recovered = retrieve_number(res[5]),
-            #             active_cases = retrieve_number(res[6]),
-            #             serious_critical = retrieve_number(res[7]),
-            #             total_case_per_mil = retrieve_number(res[8]),
-            #             death_per_mill = retrieve_number(res[9]),
-            #             total_tests = retrieve_number(res[10]),
-            #             test_per_mil = retrieve_number(res[11]),
-            #         )
-            #         cur.execute(postgres_insert_query)
-            #         conn.commit()
-            #         flag = "hello, {0}".format("test")
+                    postgres_insert_query = """
+                        INSERT INTO public.countries(
+                        country_name, total_cases, new_cases, total_deaths, new_deaths, total_recovered, active_cases, serious_critical, total_case_per_mil, death_per_mil, total_tests, test_per_mil)
+                        VALUES ('{country_name}', {total_cases}, {new_cases}, {total_deaths}, {new_deaths}, {total_recovered}, {active_cases}, {serious_critical}, {total_case_per_mil}, {death_per_mill}, {total_tests}, {test_per_mil});
+                    """.format(
+                        country_name = str(res[0]),
+                        total_cases = retrieve_number(res[1]),
+                        new_cases = retrieve_number(res[2]),
+                        total_deaths = retrieve_number(res[3]),
+                        new_deaths = retrieve_number(res[4]),
+                        total_recovered = retrieve_number(res[5]),
+                        active_cases = retrieve_number(res[6]),
+                        serious_critical = retrieve_number(res[7]),
+                        total_case_per_mil = retrieve_number(res[8]),
+                        death_per_mill = retrieve_number(res[9]),
+                        total_tests = retrieve_number(res[10]),
+                        test_per_mil = retrieve_number(res[11]),
+                    )
+                    cur.execute(postgres_insert_query)
+                    conn.commit()
+                    flag = "hello, {0}".format("test")
         except:
             e = sys.exc_info()
             print( "<p>Error: %s</p>" % e )
